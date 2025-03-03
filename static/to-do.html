@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="to-do.css">
+</head>
+<body>
+    <button id="bulb" class="theme-toggle" onclick="toggleTheme()">
+        <img id="bulb-icon" src="bulb-on.png" alt="Toggle Theme">
+    </button>
+
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <progress id="progressBar" value="0" max="100"></progress>
+
+
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Task</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="taskList"></tbody>
+        </table>
+    </div>
+
+    <script src="to-do.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+* {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+:root {
+    --bg-color: #fff3e0;
+    --container-bg: #fff;
+    --text-color: #ff4500;
+    --button-bg: #ff5733;
+    --button-hover: #e64a19;
+    --delete-bg: #ff0000;
+    --delete-hover: #b71c1c;
+    --task-bg: #ffe0b2;
+    --task-hover: #ffcc80;
+}
+
+.dark-mode {
+    --bg-color: #0a001f;
+    --container-bg: #1a002b;
+    --text-color: #d500f9;
+    --button-bg: #8e24aa;
+    --button-hover: #6a1b9a;
+    --delete-bg: #ff1744;
+    --delete-hover: #d50000;
+    --task-bg: #29004b;
+    --task-hover: #4a0072;
+}
+
+#bulb{
+    background-color: transparent;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.theme-toggle img {
+    width: 90px;
+    height: 100px;
+    transition: transform 0.3s;
+}
+
+.theme-toggle img:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    background: var(--container-bg);
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+
+
+/* Input Section */
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+}
+
+/* Progress Bar */
+progress {
+    width: 100%;
+    height: 10px;
+    margin-bottom: 15px;
+}
+
+/* Table - Increased Width */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 15px;  /* Increased padding */
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: var(--button-bg);
+    color: white;
+    font-size: 18px;
+}
+
+td {
+    font-size: 16px;
+}
+
+tr:hover {
+    background-color: var(--task-hover);
+}
+
+/* Buttons */
+button {
+    padding: 12px 18px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Delete Button */
+.delete-btn {
+    background: var(--delete-bg);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.delete-btn:hover {
+    background: var(--delete-hover);
+    transform: scale(1.1);
+}
